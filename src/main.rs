@@ -3,7 +3,7 @@ extern crate rand;
 use rand::{thread_rng, Rng};
 use std::collections::HashSet;
 
-const MAX: u8 = 100;
+const MAX: u8 = 10;
 const LIMIT: u8 = MAX / 2;
 
 #[derive(Debug)]
@@ -33,7 +33,7 @@ fn main() {
     rng.shuffle(&mut prisoners);
     open_drawers(&mut prisoners, &drawers);
     let results: Vec<Prisoner> = prisoners.into_iter().filter(|p| p.found()).collect();
-    println!("Lucky prisoners: {:?}", results.len());
+    println!("Lucky prisoners: {}", results.len());
 }
 
 fn open_drawers(prisoners: &mut Vec<Prisoner>, drawers: &Vec<u8>) {
