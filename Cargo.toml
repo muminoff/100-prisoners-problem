@@ -1,0 +1,7 @@
+[package]
+name = "prisoners"
+version = "0.1.0"
+authors = ["sardor <sardor@insilicogen.com>"]
+
+[dependencies]
+rand = "0.4.2"
